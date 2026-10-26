@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosuv | Capital Markets Technology</title>
+  <meta name="description" content="Sosuv builds capital markets infrastructure: SoFIX automated FIX certification, ATDL360 algorithmic strategy services, low-latency FIX engines and smart order routing.">
+  <meta name="theme-color" content="#283c63">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><rect width='40' height='44' rx='8' fill='%23283c63'/><path d='M33 13.5 L20 6 L7 13.5 L20 21.5 L33 29 L20 37 L7 29.5' fill='none' stroke='%23c9dbf1' stroke-width='7' stroke-linejoin='bevel'/></svg>">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG symbols: the Sosuv mark (preserved) and the plus field -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Sosuv "S" hexagon mark (redrawn from the brand logo; swap for the official SVG if available) -->
+    <symbol id="sosuv-mark" viewBox="0 0 40 44">
+      <path d="M33 13.5 L20 6 L7 13.5 L20 21.5 L33 29 L20 37 L7 29.5" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="bevel"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 16 16">
+      <path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Sosuv home">
+        <span class="brand-mark"><svg width="34" height="38"><use href="#sosuv-mark"/></svg></span>
+        <span class="brand-word">
+          <span class="brand-title">SOSUV</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#sofix">SoFIX</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#careers">Careers</a>
+        <a href="#wire">The Wire</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-solid header-cta">Talk to us</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: full-screen cinematic video-like slideshow; the page content slides up over it -->
+    <section class="video-panel video-hero" data-media id="hero">
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="hero-slide active" data-index="0">
+          <img src="assets/hero-trading-lab.jpg" alt="" class="hero-slide-img" fetchpriority="high">
+        </div>
+        <div class="hero-slide" data-index="1">
+          <img src="assets/hero-london-floor.jpg" alt="" class="hero-slide-img" loading="eager">
+        </div>
+        <div class="hero-slide" data-index="2">
+          <img src="assets/hero-algo-warroom.jpg" alt="" class="hero-slide-img" loading="eager">
+        </div>
+        <div class="hero-slide" data-index="3">
+          <img src="assets/hero-equinix-fiber.jpg" alt="" class="hero-slide-img" loading="eager">
+        </div>
+      </div>
+
+      <div class="video-shade"></div>
+
+      <div class="wrap video-content hero-content">
+        <p class="hero-kicker">London · New York · Bangalore · Hong Kong</p>
+        <!-- Typing headline: edit the phrases in data-words -->
+        <h1 class="hero-title" aria-label="The craft of market infrastructure, FIX certification, algorithmic execution and low-latency connectivity.">
+          <span aria-hidden="true">The craft of<br><span class="typer" data-words='["market infrastructure.", "FIX certification.", "algorithmic execution.", "low-latency connectivity."]'><span class="typer-text">market infrastructure.</span><span class="typer-caret"></span></span></span>
+        </h1>
+        <p class="hero-lede">Sosuv is a capital markets technology firm. We build the connectivity, certification and execution systems that exchanges, brokers and buy-side firms rely on every trading day.</p>
+        <div class="hero-actions">
+          <a href="#sofix" class="btn-hero btn-hero-primary">Explore SoFIX</a>
+          <a href="#contact" class="btn-hero btn-hero-ghost">Talk to us</a>
+        </div>
+      </div>
+
+      <a href="#intro" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <div class="stack" data-stack>
+    <section class="intro" id="intro">
+      <svg class="plus-field" viewBox="0 0 560 560" aria-hidden="true">
+        <defs>
+          <pattern id="plus" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M20 14v12M14 20h12" stroke="currentColor" stroke-width="1.4"/>
+          </pattern>
+          <radialGradient id="fade" cx="70%" cy="35%" r="65%">
+            <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="fadeMask"><rect width="560" height="560" fill="url(#fade)"/></mask>
+        </defs>
+        <rect width="560" height="560" fill="url(#plus)" mask="url(#fadeMask)"/>
+      </svg>
+
+      <div class="wrap">
+        <h2 class="h2 reveal intro-title">Sosuv is a capital markets technology firm. We make trading systems <em>faster to connect</em> and harder to break.</h2>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat-val">80<small>%</small></div><div class="stat-label">Faster counterparty onboarding</div></div>
+          <div class="stat"><div class="stat-val">1.12<small>µs</small></div><div class="stat-label">Engine message dispatch</div></div>
+          <div class="stat"><div class="stat-val">$4B<small>+</small></div><div class="stat-label">Client AUM on our systems</div></div>
+          <div class="stat"><div class="stat-val">99.999<small>%</small></div><div class="stat-label">Availability target</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORMS: list on the left, detail panel on the right (accordion on phones) -->
+    <section class="section platforms" id="platforms">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">01</span> Platforms</p>
+            <h2 class="h2 reveal">Five systems. <em>One</em> standard.</h2>
+          </div>
+          <p class="lede reveal">From onboarding a new broker to routing an order across fourteen venues, each platform is built to run reliably in production.</p>
+        </div>
+
+        <div class="pf reveal">
+          <div class="pf-item active">
+            <button class="pf-tab" id="pft-sofix" aria-controls="pfp-sofix" aria-expanded="true">
+              <span class="pf-num">01</span>
+              <span class="pf-name">SoFIX</span>
+              <span class="pf-tag">Automated FIX certification</span>
+              <span class="pf-arrow" aria-hidden="true"><svg width="16" height="16"><use href="#arrow"/></svg></span>
+            </button>
+            <div class="pf-panel" id="pfp-sofix" role="region" aria-labelledby="pft-sofix">
+              <div class="pf-panel-inner">
+                <div class="pf-panel-top">
+                  <div>
+                    <p class="pf-kicker">01 / 05 · Automated FIX certification</p>
+                    <h3 class="pf-title">SoFIX</h3>
+                  </div>
+                  <svg class="pf-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 16h28M10 28h28M10 40h18"/><path d="M42 36l5 5 9-11"/><circle cx="6" cy="16" r="1.5"/><circle cx="6" cy="28" r="1.5"/><circle cx="6" cy="40" r="1.5"/></svg>
+                </div>
+                <p class="pf-desc">An AI-powered certification platform that reads counterparty specs, generates test packs and verifies conformance automatically, turning weeks of manual onboarding into days.</p>
+                <ul class="pf-feats"><li>Up to 80% less time to onboard clients and brokers</li><li>Parses custom specs, dictionaries and repeating groups</li><li>Self-service testing portal with conformance certificates</li></ul>
+                <div class="pf-foot">
+                  <div class="pf-metric"><strong>80<small>%</small></strong><span>Faster certification</span></div>
+                  <a href="#sofix" class="pf-cta">Explore SoFIX <svg width="14" height="14"><use href="#arrow"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <button class="pf-tab" id="pft-atdl360" aria-controls="pfp-atdl360" aria-expanded="false">
+              <span class="pf-num">02</span>
+              <span class="pf-name">ATDL360</span>
+              <span class="pf-tag">Algorithmic strategy services</span>
+              <span class="pf-arrow" aria-hidden="true"><svg width="16" height="16"><use href="#arrow"/></svg></span>
+            </button>
+            <div class="pf-panel" id="pfp-atdl360" role="region" aria-labelledby="pft-atdl360">
+              <div class="pf-panel-inner">
+                <div class="pf-panel-top">
+                  <div>
+                    <p class="pf-kicker">02 / 05 · Algorithmic strategy services</p>
+                    <h3 class="pf-title">ATDL360</h3>
+                  </div>
+                  <svg class="pf-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 14h48M8 32h48M8 50h48"/><circle cx="22" cy="14" r="5"/><circle cx="42" cy="32" r="5"/><circle cx="16" cy="50" r="5"/></svg>
+                </div>
+                <p class="pf-desc">FIXatdl work across the whole lifecycle: schema design, strategy authoring, parameter rule trees and UI rendering in the major OMS and EMS platforms.</p>
+                <ul class="pf-feats"><li>FIXatdl 1.1 / 1.2 compliant strategy XML</li><li>Parameter validation and widget mapping</li><li>Bloomberg EMSX, Fidessa, Enfusion, Charles River</li></ul>
+                <div class="pf-foot">
+                  <div class="pf-metric"><strong>1.1 <small>/ 1.2</small></strong><span>FIXatdl versions supported</span></div>
+                  <a href="mailto:sales@sosuvconsulting.com?subject=ATDL360%20enquiry" class="pf-cta">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <button class="pf-tab" id="pft-engine" aria-controls="pfp-engine" aria-expanded="false">
+              <span class="pf-num">03</span>
+              <span class="pf-name">FIX Engine</span>
+              <span class="pf-tag">Low-latency messaging</span>
+              <span class="pf-arrow" aria-hidden="true"><svg width="16" height="16"><use href="#arrow"/></svg></span>
+            </button>
+            <div class="pf-panel" id="pfp-engine" role="region" aria-labelledby="pft-engine">
+              <div class="pf-panel-inner">
+                <div class="pf-panel-top">
+                  <div>
+                    <p class="pf-kicker">03 / 05 · Low-latency messaging</p>
+                    <h3 class="pf-title">FIX Engine</h3>
+                  </div>
+                  <svg class="pf-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M4 34h12l5-14 8 26 7-20 5 8h19"/></svg>
+                </div>
+                <p class="pf-desc">A deterministic messaging engine in C++20 and low-GC Java, built for high-throughput order routing with zero-allocation memory pools and lock-free queues.</p>
+                <ul class="pf-feats"><li>Sub-microsecond message dispatch</li><li>FIX 4.0 through 5.0SP2 and FAST</li><li>Multi-asset session management</li></ul>
+                <div class="pf-foot">
+                  <div class="pf-metric"><strong>&lt;1.12<small>µs</small></strong><span>Message dispatch</span></div>
+                  <a href="mailto:sales@sosuvconsulting.com?subject=FIX%20Engine%20enquiry" class="pf-cta">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <button class="pf-tab" id="pft-router" aria-controls="pfp-router" aria-expanded="false">
+              <span class="pf-num">04</span>
+              <span class="pf-name">Smart Router</span>
+              <span class="pf-tag">Multi-venue execution</span>
+              <span class="pf-arrow" aria-hidden="true"><svg width="16" height="16"><use href="#arrow"/></svg></span>
+            </button>
+            <div class="pf-panel" id="pfp-router" role="region" aria-labelledby="pft-router">
+              <div class="pf-panel-inner">
+                <div class="pf-panel-top">
+                  <div>
+                    <p class="pf-kicker">04 / 05 · Multi-venue execution</p>
+                    <h3 class="pf-title">Smart Router</h3>
+                  </div>
+                  <svg class="pf-icon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="10" cy="32" r="4"/><path d="M14 32h10M24 32l14-16h10M24 32h24M24 32l14 16h10"/><circle cx="52" cy="16" r="3"/><circle cx="52" cy="32" r="3"/><circle cx="52" cy="48" r="3"/></svg>
+                </div>
+                <p class="pf-desc">A rule-based router that brings together fragmented liquidity, crosses in midpoint dark pools and optimises fees across lit and alternative venues while keeping market impact low.</p>
+                <ul class="pf-feats"><li>NBBO sweep with dark midpoint crossing</li><li>Fee-aware venue ranking</li><li>Configurable routing goals per desk</li></ul>
+                <div class="pf-foot">
+                  <div class="pf-metric"><strong>14</strong><span>Exchanges integrated</span></div>
+                  <a href="mailto:sales@sosuvconsulting.com?subject=Smart%20Router%20enquiry" class="pf-cta">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pf-item">
+            <button class="pf-tab" id="pft-monitor" aria-controls="pfp-monitor" aria-expanded="false">
+              <span class="pf-num">05</span>
+              <span class="pf-name">Monitor</span>
+              <span class="pf-tag">Observability &amp; drop-copy</span>
+              <span class="pf-arrow" aria-hidden="true"><svg width="16" height="16"><use href="#arrow"/></svg></span>
+            </button>
+            <div class="pf-panel" id="pfp-monitor" role="region" aria-labelledby="pft-monitor">
+              <div class="pf-panel-inner">
+                <div class="pf-panel-top">
+                  <div>
+                    <p class="pf-kicker">05 / 05 · Observability &amp; drop-copy</p>
+                    <h3 class="pf-title">Monitor</h3>
+                  </div>
+                  <svg class="pf-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="10" width="52" height="36" rx="3"/><path d="M12 36l10-10 8 6 12-14 10 8"/><path d="M24 54h16M32 46v8"/></svg>
+                </div>
+                <p class="pf-desc">Real-time packet telemetry, post-trade drop-copy reconciliation, sequence reset alerts and anomaly detection that catch problems before they become outages.</p>
+                <ul class="pf-feats"><li>Works with any FIX engine or venue</li><li>Post-trade drop-copy reconciliation</li><li>Session and sequence anomaly alerts</li></ul>
+                <div class="pf-foot">
+                  <div class="pf-metric"><strong>99.999<small>%</small></strong><span>Availability target</span></div>
+                  <a href="mailto:sales@sosuvconsulting.com?subject=Monitor%20enquiry" class="pf-cta">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFIX -->
+    <section class="section sofix" id="sofix">
+      <div class="wrap sofix-grid">
+        <div class="collage reveal" aria-hidden="false">
+          <figure class="collage-a">
+            <!-- Optional video: add assets/videos/sofix-1.mp4 -->
+            <video muted loop playsinline preload="none" poster="assets/team-engineers.png" data-autoplay aria-label="Sosuv engineers working on FIX certification">
+              <source src="assets/videos/sofix-1.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <figure class="collage-b">
+            <!-- Optional video: add assets/videos/sofix-2.mp4 -->
+            <video muted loop playsinline preload="none" poster="assets/team-pair.png" data-autoplay aria-label="Two Sosuv engineers reviewing code together">
+              <source src="assets/videos/sofix-2.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="collage-stat">
+            <strong>80<small>%</small></strong>
+            <span>Faster certification</span>
+          </div>
+        </div>
+
+        <div class="sofix-copy">
+          <p class="eyebrow reveal"><span class="num">02</span> SoFIX</p>
+          <h2 class="h2 reveal">SoFIX. Bring clients live <em>faster.</em></h2>
+          <p class="lede reveal">SoFIX is a fully automated, AI-powered FIX certification platform that helps capital markets firms bring clients live faster.</p>
+          <p class="body-copy reveal">It eliminates manual spec handling, test pack creation and validation to cut certification times by up to 80%. SoFIX accelerates revenue recognition, reduces costly errors, and transforms painful manual FIX onboarding into a seamless, self-service workflow.</p>
+
+          <ul class="feature-list reveal">
+            <li><span class="fl-num">01</span><span><strong>No manual spec handling</strong>Counterparty specs are read and mapped automatically.</span></li>
+            <li><span class="fl-num">02</span><span><strong>Automated test packs</strong>Test creation and validation run without manual effort.</span></li>
+            <li><span class="fl-num">03</span><span><strong>Self-service onboarding</strong>Clients certify through a seamless workflow.</span></li>
+          </ul>
+
+          <div class="sofix-actions reveal">
+            <a href="mailto:sales@sosuvconsulting.com?subject=SoFIX%20demo%20request" class="btn btn-solid">Request a SoFIX demo <svg width="16" height="16"><use href="#arrow"/></svg></a>
+            <a href="#wire" class="link-arrow">Try the FIX decoder <svg width="14" height="14"><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section expertise" id="expertise">
+      <div class="wrap expertise-grid">
+        <div class="expertise-copy">
+          <p class="eyebrow reveal"><span class="num">03</span> Expertise</p>
+          <h2 class="h2 reveal">Engineering talent for <em>financial services.</em></h2>
+          <p class="lede reveal">The Sosuv team provides full-stack software development, connectivity management and more to a wide range of leading financial services firms.</p>
+          <p class="body-copy reveal">This exceptional pool of talent is led by a strong management team that ensures you can worry less about outages and missed deadlines, and focus more on your business growth targets.</p>
+          <ul class="chips reveal">
+            <li>Full-stack software development</li>
+            <li>Connectivity management</li>
+            <li>Production support</li>
+          </ul>
+        </div>
+        <figure class="photo reveal">
+          <!-- Optional video: add assets/videos/office.mp4 — the photo shows until then -->
+          <video class="photo-media" muted loop playsinline preload="none" poster="assets/team-office.png" data-autoplay aria-label="The Sosuv team at work in the office">
+            <source src="assets/videos/office.mp4" type="video/mp4">
+          </video>
+          <figcaption>The Sosuv office</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PEOPLE / CAREERS -->
+    <section class="people" id="careers">
+      <div class="people-band">
+        <div class="wrap people-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">04</span> People</p>
+            <h2 class="people-title reveal">We hire engineers who care about the <span>details that move markets.</span></h2>
+          </div>
+          <div class="people-side reveal">
+            <p>Small teams, senior engineers and real production systems. At Sosuv, the work you ship goes live with exchanges, brokers and buy-side firms around the world.</p>
+            <a href="mailto:careers@sosuvconsulting.com?subject=Careers%20at%20Sosuv" class="people-btn"><span aria-hidden="true">↳</span> Join our team</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap people-cards">
+        <article class="pcard reveal">
+          <div class="pcard-img"><img src="assets/hero-algo-warroom.jpg" alt="Engineers mapping a FIX message flow on a glass wall" width="1376" height="768" loading="lazy"></div>
+          <h3>Precision</h3>
+          <p>Every tag, every message, every edge case. We sweat the details so our clients never have to.</p>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard-img"><img src="assets/team-engineers.png" alt="Sosuv engineers working together at their desks" width="437" height="339" loading="lazy"></div>
+          <h3>Ownership</h3>
+          <p>Engineers own their systems end to end, from the first spec review to production support.</p>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard-img"><img src="assets/team-pair.png" alt="Two Sosuv engineers reviewing code on a laptop" width="420" height="394" loading="lazy"></div>
+          <h3>Collaboration</h3>
+          <p>Ideas move freely between London, New York, Bangalore and Hong Kong.</p>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard-img"><img src="assets/hero-london-floor.jpg" alt="A trading floor overlooking the city at dusk" width="1376" height="768" loading="lazy"></div>
+          <h3>Markets</h3>
+          <p>We love how markets work, and building the systems that keep them running.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE WIRE (interactive decoder) -->
+    <section class="section wire-section" id="wire">
+      <div class="wire-aurora" aria-hidden="true"></div>
+      <canvas class="wire-canvas" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">05</span> The Wire</p>
+            <h2 class="h2 reveal">Read a FIX message the way <em>we</em> do.</h2>
+          </div>
+          <p class="lede reveal">Paste a raw message or pick a sample. Every tag is decoded and the body length and checksum are checked in your browser.</p>
+        </div>
+
+        <div class="wire reveal">
+          <div class="wire-bar">
+            <span class="wire-title"><span class="wire-dot"></span>Sosuv wire decoder <span class="wire-live"><i></i>Live</span></span>
+            <div class="wire-presets" role="group" aria-label="Sample messages">
+              <button data-sample="8=FIX.4.4|9=0|35=D|49=CLIENT_DMA|56=SOSUV_GW|34=1024|52=20261026-12:00:00.145|11=ORD-9021|55=AAPL|54=1|38=5000|40=2|44=185.50|59=0|10=000|" class="active">NewOrderSingle</button>
+              <button data-sample="8=FIX.4.4|9=0|35=8|49=SOSUV_GW|56=CLIENT_DMA|34=1025|52=20261026-12:00:00.285|37=MATCH-8891|11=ORD-9021|17=FILL-01|150=F|39=2|55=AAPL|54=1|38=5000|32=5000|31=185.50|14=5000|151=0|6=185.50|10=000|">ExecutionReport</button>
+              <button data-sample="8=FIX.4.4|9=0|35=G|49=CLIENT_DMA|56=SOSUV_GW|34=1026|52=20261026-12:00:00.320|41=ORD-9021|11=ORD-9022|55=AAPL|54=1|38=3500|40=2|44=186.00|10=000|">Cancel/Replace</button>
+            </div>
+          </div>
+          <div class="wire-stream" aria-hidden="true"><i></i><i></i><i></i></div>
+
+          <div class="wire-body">
+            <div class="wire-left">
+              <div class="wire-io">
+                <label class="wire-label" for="wireInput">Raw message <span>· | or SOH delimited · edit freely</span></label>
+                <textarea id="wireInput" class="wire-input" rows="3" spellcheck="false"></textarea>
+              </div>
+
+              <div class="wire-parsed">
+                <div class="wire-parsed-head">
+                  <span class="wire-label">Parsed</span>
+                  <span class="wire-legend"><i class="k-header"></i>Header <i class="k-body"></i>Body <i class="k-trailer"></i>Trailer</span>
+                </div>
+                <div id="wireStrip" class="wire-strip"></div>
+              </div>
+
+              <div id="wireStatus" class="wire-status"></div>
+            </div>
+
+            <div class="wire-right">
+              <div id="wireOut" class="wire-out" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTES: one featured quote at a time, auto-advancing -->
+    <section class="section quotes" id="quotes" aria-roledescription="carousel" aria-label="Quotes on markets">
+      <div class="wrap">
+        <div class="quotes-top">
+          <p class="eyebrow reveal">On markets</p>
+          <div class="q-arrows reveal">
+            <button class="q-arrow" data-dir="-1" aria-label="Previous quote"><svg width="16" height="16" style="transform:rotate(180deg)"><use href="#arrow"/></svg></button>
+            <button class="q-arrow" data-dir="1" aria-label="Next quote"><svg width="16" height="16"><use href="#arrow"/></svg></button>
+          </div>
+        </div>
+
+        <div class="q-stage reveal">
+          <figure class="q active" id="q-0" role="tabpanel" aria-labelledby="qt-0">
+            <blockquote>In the short run, the market is a voting machine but in the long run, it is a <em>weighing machine.</em></blockquote>
+            <figcaption><strong>Benjamin Graham</strong><span>Investor and author · as quoted by Warren Buffett</span></figcaption>
+          </figure>
+          <figure class="q" id="q-1" role="tabpanel" aria-labelledby="qt-1" aria-hidden="true">
+            <blockquote>Be fearful when others are greedy and <em>greedy when others are fearful.</em></blockquote>
+            <figcaption><strong>Warren Buffett</strong><span>Chairman, Berkshire Hathaway · 1986 shareholder letter</span></figcaption>
+          </figure>
+          <figure class="q" id="q-2" role="tabpanel" aria-labelledby="qt-2" aria-hidden="true">
+            <blockquote>Don't look for the needle in the haystack. <em>Just buy the haystack!</em></blockquote>
+            <figcaption><strong>John C. Bogle</strong><span>Founder, Vanguard · The Little Book of Common Sense Investing</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="q-tabs" role="tablist" aria-label="Choose a quote">
+          <button class="q-tab active" id="qt-0" role="tab" aria-selected="true" aria-controls="q-0"><span class="q-num">01</span><span class="q-name">Graham</span><span class="q-bar"><i></i></span></button>
+          <button class="q-tab" id="qt-1" role="tab" aria-selected="false" aria-controls="q-1" tabindex="-1"><span class="q-num">02</span><span class="q-name">Buffett</span><span class="q-bar"><i></i></span></button>
+          <button class="q-tab" id="qt-2" role="tab" aria-selected="false" aria-controls="q-2" tabindex="-1"><span class="q-num">03</span><span class="q-name">Bogle</span><span class="q-bar"><i></i></span></button>
+        </div>
+
+        <p class="q-note">Quotes are attributed to their authors and do not imply endorsement of Sosuv.</p>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="footer-inner">
+      <!-- Row 1: brand · headline · CTA -->
+      <div class="footer-head">
+        <a href="#top" class="brand" aria-label="Sosuv home">
+          <span class="brand-mark"><svg width="30" height="33"><use href="#sosuv-mark"/></svg></span>
+          <span class="brand-word">
+            <span class="brand-title">SOSUV</span>
+            <span class="brand-sub">Capital Markets Tech</span>
+          </span>
+        </a>
+        <h2 class="footer-title">Our expertise and solutions, delivering on your <em>business opportunities.</em></h2>
+        <a href="mailto:sales@sosuvconsulting.com" class="glass-btn">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+      </div>
+
+      <!-- Row 2: four balanced columns -->
+      <div class="footer-groups">
+        <div class="footer-col footer-about">
+          <h4>About Sosuv</h4>
+          <p class="footer-tagline">Your capital markets technology partner, trusted by leading exchanges, brokers, trading platforms, buy-side firms and fintechs worldwide.</p>
+          <span class="footer-iso"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>ISO 27001 certified</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links two">
+            <!-- TODO: point Case Study and Insight at their pages once they exist -->
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#platforms">Solutions</a></li>
+            <li><a href="#">Case Study</a></li>
+            <li><a href="#">Insight</a></li>
+            <li><a href="#expertise">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="mailto:sales@sosuvconsulting.com">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reach us</h4>
+          <dl class="footer-contact">
+            <dt>Sales</dt><dd><a href="mailto:sales@sosuvconsulting.com">sales@sosuvconsulting.com</a></dd>
+            <!-- TODO: confirm careers email -->
+            <dt>Careers</dt><dd><a href="mailto:careers@sosuvconsulting.com">careers@sosuvconsulting.com</a></dd>
+            <dt>Offices</dt><dd>London · Bangalore<br>New York · Hong Kong</dd>
+          </dl>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay in the loop</h4>
+          <form class="footer-news" id="newsletterForm" novalidate>
+            <label for="nl-email" class="sr-only">Work email</label>
+            <div class="glass-input">
+              <input id="nl-email" type="email" placeholder="Your work email" required>
+              <button type="submit" aria-label="Subscribe"><svg width="16" height="16"><use href="#arrow"/></svg></button>
+            </div>
+            <p class="footer-note" id="nlNote" role="status"></p>
+          </form>
+          <!-- TODO: replace # with your real profile URLs -->
+          <ul class="footer-social" aria-label="Social media">
+            <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-7.5h2.5l.5-3h-3V8.75c0-.9.4-1.75 1.75-1.75H17V4.3A17 17 0 0 0 14.6 4C12.2 4 11 5.4 11 7.9v2.6H8.5v3H11V21"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 3: legal -->
+      <div class="footer-bottom">
+        <span>&copy; 2026 Sosuv Consulting LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#top" class="to-top">Top <span>↑</span></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

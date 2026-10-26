@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosuv | Capital Markets Technology</title>
+  <meta name="description" content="Sosuv builds capital markets infrastructure: SoFIX automated FIX certification, ATDL360 algorithmic strategy services, low-latency FIX engines and smart order routing.">
+  <meta name="theme-color" content="#283c63">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><rect width='40' height='44' rx='8' fill='%23283c63'/><path d='M33 13.5 L20 6 L7 13.5 L20 21.5 L33 29 L20 37 L7 29.5' fill='none' stroke='%23c9dbf1' stroke-width='7' stroke-linejoin='bevel'/></svg>">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG symbols: the Sosuv mark (preserved) and the plus field -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Sosuv "S" hexagon mark (redrawn from the brand logo; swap for the official SVG if available) -->
+    <symbol id="sosuv-mark" viewBox="0 0 40 44">
+      <path d="M33 13.5 L20 6 L7 13.5 L20 21.5 L33 29 L20 37 L7 29.5" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="bevel"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 16 16">
+      <path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Sosuv home">
+        <span class="brand-mark"><svg width="34" height="38"><use href="#sosuv-mark"/></svg></span>
+        <span class="brand-word">
+          <span class="brand-title">SOSUV</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#approach">About</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#wire">The Wire</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-solid header-cta">Talk to us</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: full-screen video; the page content slides up over it -->
+    <section class="video-panel video-hero" data-media>
+      <!-- Put your video at assets/videos/hero.mp4 (and optionally hero.webm) -->
+      <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="assets/hero-trading-lab.jpg">
+        <source src="assets/videos/hero.webm" type="video/webm">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="video-shade"></div>
+
+      <div class="wrap video-content">
+        <p class="eyebrow">London · New York · Bengaluru · Hong Kong</p>
+        <h1 class="display">The craft of <em>market</em> infrastructure.</h1>
+        <div class="hero-foot">
+          <p class="lede">We build the connectivity, certification and execution systems that broker-dealers, exchanges and asset managers rely on every trading day.</p>
+          <div class="hero-actions">
+            <a href="#platforms" class="btn btn-ghost-light">Our platforms</a>
+            <a href="#contact" class="btn btn-light">Start a conversation <svg width="16" height="16"><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#intro" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <div class="stack" data-stack>
+    <section class="intro" id="intro">
+      <svg class="plus-field" viewBox="0 0 560 560" aria-hidden="true">
+        <defs>
+          <pattern id="plus" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M20 14v12M14 20h12" stroke="currentColor" stroke-width="1.4"/>
+          </pattern>
+          <radialGradient id="fade" cx="70%" cy="35%" r="65%">
+            <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="fadeMask"><rect width="560" height="560" fill="url(#fade)"/></mask>
+        </defs>
+        <rect width="560" height="560" fill="url(#plus)" mask="url(#fadeMask)"/>
+      </svg>
+
+      <div class="wrap">
+        <h2 class="h2 reveal intro-title">Sosuv is a capital markets technology firm. We make trading systems <em>faster to connect</em> and harder to break.</h2>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat-val">80<small>%</small></div><div class="stat-label">Faster counterparty onboarding</div></div>
+          <div class="stat"><div class="stat-val">1.12<small>µs</small></div><div class="stat-label">Engine message dispatch</div></div>
+          <div class="stat"><div class="stat-val">$4B<small>+</small></div><div class="stat-label">Client AUM on our systems</div></div>
+          <div class="stat"><div class="stat-val">99.999<small>%</small></div><div class="stat-label">Availability target</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section" id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">01</span> Approach</p>
+            <h2 class="h2 reveal">Built for markets that <em>don't</em> forgive mistakes.</h2>
+          </div>
+          <p class="lede reveal">Trading systems fail in the details: a mis-mapped tag, a sequence gap, a microsecond lost in a queue. We work at that level, so our clients don't have to.</p>
+        </div>
+
+        <div class="principles">
+          <div class="principle reveal"><span class="idx">/01</span><h3 class="h3">Precision</h3><p>Every field, every message, every edge case accounted for and tested against the counterparty spec.</p></div>
+          <div class="principle reveal"><span class="idx">/02</span><h3 class="h3">Determinism</h3><p>Zero-allocation paths, lock-free queues and predictable latency under load, not just on a good day.</p></div>
+          <div class="principle reveal"><span class="idx">/03</span><h3 class="h3">Automation</h3><p>Certification, test packs and conformance checks done by machines, so engineers can spend their time on harder problems.</p></div>
+          <div class="principle reveal"><span class="idx">/04</span><h3 class="h3">Partnership</h3><p>Senior engineers on every engagement, from the first spec review to production support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORMS -->
+    <section class="section" id="platforms">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">02</span> Platforms</p>
+            <h2 class="h2 reveal">Five systems. <em>One</em> standard.</h2>
+          </div>
+          <p class="lede reveal">From onboarding a new broker to routing an order across fourteen venues, each platform is built to run unattended in production.</p>
+        </div>
+
+        <div class="platform-list">
+          <div class="platform open">
+            <button class="platform-row" aria-expanded="true">
+              <span class="idx">01</span>
+              <span class="platform-name">SoFIX</span>
+              <span class="platform-tag">Automated FIX certification</span>
+              <span class="platform-toggle"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </button>
+            <div class="platform-body"><div><div class="platform-detail">
+              <p>An AI-assisted certification platform that reads counterparty specifications, generates test packs and verifies conformance on its own. Onboarding goes from six weeks to a few days.</p>
+              <ul>
+                <li>Up to 80% less time to onboard clients and brokers</li>
+                <li>Parses custom specs, dictionaries and repeating groups</li>
+                <li>Self-service testing portal with conformance certificates</li>
+              </ul>
+            </div></div></div>
+          </div>
+
+          <div class="platform">
+            <button class="platform-row" aria-expanded="false">
+              <span class="idx">02</span>
+              <span class="platform-name">ATDL360</span>
+              <span class="platform-tag">Algorithmic strategy services</span>
+              <span class="platform-toggle"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </button>
+            <div class="platform-body"><div><div class="platform-detail">
+              <p>FIXatdl work across the whole lifecycle: schema design, strategy authoring, parameter rule trees and UI rendering in the major OMS and EMS platforms.</p>
+              <ul>
+                <li>FIXatdl 1.1 / 1.2 compliant strategy XML</li>
+                <li>Parameter validation and widget mapping</li>
+                <li>Bloomberg EMSX, Fidessa, Enfusion, Charles River</li>
+              </ul>
+            </div></div></div>
+          </div>
+
+          <div class="platform">
+            <button class="platform-row" aria-expanded="false">
+              <span class="idx">03</span>
+              <span class="platform-name">FIX Engine</span>
+              <span class="platform-tag">Low-latency messaging</span>
+              <span class="platform-toggle"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </button>
+            <div class="platform-body"><div><div class="platform-detail">
+              <p>A deterministic messaging engine in C++20 and low-GC Java, built for high-throughput order routing with zero-allocation memory pools and lock-free queues.</p>
+              <ul>
+                <li>Sub-microsecond dispatch (&lt; 1.12µs)</li>
+                <li>FIX 4.0 through 5.0SP2 and FAST</li>
+                <li>Multi-asset session management</li>
+              </ul>
+            </div></div></div>
+          </div>
+
+          <div class="platform">
+            <button class="platform-row" aria-expanded="false">
+              <span class="idx">04</span>
+              <span class="platform-name">Smart Router</span>
+              <span class="platform-tag">Multi-venue execution</span>
+              <span class="platform-toggle"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </button>
+            <div class="platform-body"><div><div class="platform-detail">
+              <p>A rule-based router that brings together fragmented liquidity, crosses in midpoint dark pools and optimises fees across lit and alternative venues while keeping market impact low.</p>
+              <ul>
+                <li>NBBO sweep with dark midpoint crossing</li>
+                <li>Fee-aware venue ranking</li>
+                <li>Configurable routing goals per desk</li>
+              </ul>
+            </div></div></div>
+          </div>
+
+          <div class="platform">
+            <button class="platform-row" aria-expanded="false">
+              <span class="idx">05</span>
+              <span class="platform-name">Monitor</span>
+              <span class="platform-tag">Observability &amp; drop-copy</span>
+              <span class="platform-toggle"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            </button>
+            <div class="platform-body"><div><div class="platform-detail">
+              <p>Real-time packet telemetry, drop-copy reconciliation after the trade, sequence reset alerts and anomaly detection that catch problems before they become outages.</p>
+              <ul>
+                <li>Works with any FIX engine or venue</li>
+                <li>Post-trade drop-copy reconciliation</li>
+                <li>Session and sequence anomaly alerts</li>
+              </ul>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE WIRE (interactive decoder) -->
+    <section class="section wire-section" id="wire">
+      <div class="wire-aurora" aria-hidden="true"></div>
+      <canvas class="wire-canvas" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal"><span class="num">03</span> The Wire</p>
+            <h2 class="h2 reveal">Read a FIX message the way <em>we</em> do.</h2>
+          </div>
+          <p class="lede reveal">Paste a raw message or pick a sample. Every tag is decoded and the body length and checksum are checked in your browser.</p>
+        </div>
+
+        <div class="wire reveal">
+          <div class="wire-bar">
+            <span class="wire-title"><span class="wire-dot"></span>Sosuv wire decoder <span class="wire-live"><i></i>Live</span></span>
+            <div class="wire-presets" role="group" aria-label="Sample messages">
+              <button data-sample="8=FIX.4.4|9=0|35=D|49=CLIENT_DMA|56=SOSUV_GW|34=1024|52=20261026-12:00:00.145|11=ORD-9021|55=AAPL|54=1|38=5000|40=2|44=185.50|59=0|10=000|" class="active">NewOrderSingle</button>
+              <button data-sample="8=FIX.4.4|9=0|35=8|49=SOSUV_GW|56=CLIENT_DMA|34=1025|52=20261026-12:00:00.285|37=MATCH-8891|11=ORD-9021|17=FILL-01|150=F|39=2|55=AAPL|54=1|38=5000|32=5000|31=185.50|14=5000|151=0|6=185.50|10=000|">ExecutionReport</button>
+              <button data-sample="8=FIX.4.4|9=0|35=G|49=CLIENT_DMA|56=SOSUV_GW|34=1026|52=20261026-12:00:00.320|41=ORD-9021|11=ORD-9022|55=AAPL|54=1|38=3500|40=2|44=186.00|10=000|">Cancel/Replace</button>
+            </div>
+          </div>
+          <div class="wire-stream" aria-hidden="true"><i></i><i></i><i></i></div>
+
+          <div class="wire-body">
+            <div class="wire-left">
+              <div class="wire-io">
+                <label class="wire-label" for="wireInput">Raw message <span>· | or SOH delimited · edit freely</span></label>
+                <textarea id="wireInput" class="wire-input" rows="3" spellcheck="false"></textarea>
+              </div>
+
+              <div class="wire-parsed">
+                <div class="wire-parsed-head">
+                  <span class="wire-label">Parsed</span>
+                  <span class="wire-legend"><i class="k-header"></i>Header <i class="k-body"></i>Body <i class="k-trailer"></i>Trailer</span>
+                </div>
+                <div id="wireStrip" class="wire-strip"></div>
+              </div>
+
+              <div id="wireStatus" class="wire-status"></div>
+            </div>
+
+            <div class="wire-right">
+              <div id="wireOut" class="wire-out" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTES: one featured quote at a time, auto-advancing -->
+    <section class="section quotes" id="quotes" aria-roledescription="carousel" aria-label="Quotes on markets">
+      <div class="wrap">
+        <div class="quotes-top">
+          <p class="eyebrow reveal">On markets</p>
+          <div class="q-arrows reveal">
+            <button class="q-arrow" data-dir="-1" aria-label="Previous quote"><svg width="16" height="16" style="transform:rotate(180deg)"><use href="#arrow"/></svg></button>
+            <button class="q-arrow" data-dir="1" aria-label="Next quote"><svg width="16" height="16"><use href="#arrow"/></svg></button>
+          </div>
+        </div>
+
+        <div class="q-stage reveal">
+          <figure class="q active" id="q-0" role="tabpanel" aria-labelledby="qt-0">
+            <blockquote>In the short run, the market is a voting machine but in the long run, it is a <em>weighing machine.</em></blockquote>
+            <figcaption><strong>Benjamin Graham</strong><span>Investor and author · as quoted by Warren Buffett</span></figcaption>
+          </figure>
+          <figure class="q" id="q-1" role="tabpanel" aria-labelledby="qt-1" aria-hidden="true">
+            <blockquote>Be fearful when others are greedy and <em>greedy when others are fearful.</em></blockquote>
+            <figcaption><strong>Warren Buffett</strong><span>Chairman, Berkshire Hathaway · 1986 shareholder letter</span></figcaption>
+          </figure>
+          <figure class="q" id="q-2" role="tabpanel" aria-labelledby="qt-2" aria-hidden="true">
+            <blockquote>Don't look for the needle in the haystack. <em>Just buy the haystack!</em></blockquote>
+            <figcaption><strong>John C. Bogle</strong><span>Founder, Vanguard · The Little Book of Common Sense Investing</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="q-tabs" role="tablist" aria-label="Choose a quote">
+          <button class="q-tab active" id="qt-0" role="tab" aria-selected="true" aria-controls="q-0"><span class="q-num">01</span><span class="q-name">Graham</span><span class="q-bar"><i></i></span></button>
+          <button class="q-tab" id="qt-1" role="tab" aria-selected="false" aria-controls="q-1" tabindex="-1"><span class="q-num">02</span><span class="q-name">Buffett</span><span class="q-bar"><i></i></span></button>
+          <button class="q-tab" id="qt-2" role="tab" aria-selected="false" aria-controls="q-2" tabindex="-1"><span class="q-num">03</span><span class="q-name">Bogle</span><span class="q-bar"><i></i></span></button>
+        </div>
+
+        <p class="q-note">Quotes are attributed to their authors and do not imply endorsement of Sosuv.</p>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="footer-inner">
+      <!-- Row 1: brand · headline · CTA -->
+      <div class="footer-head">
+        <a href="#top" class="brand" aria-label="Sosuv home">
+          <span class="brand-mark"><svg width="30" height="33"><use href="#sosuv-mark"/></svg></span>
+          <span class="brand-word">
+            <span class="brand-title">SOSUV</span>
+            <span class="brand-sub">Capital Markets Tech</span>
+          </span>
+        </a>
+        <h2 class="footer-title">Our expertise and solutions, delivering on your <em>business opportunities.</em></h2>
+        <a href="mailto:sales@sosuvconsulting.com" class="glass-btn">Talk to us <svg width="14" height="14"><use href="#arrow"/></svg></a>
+      </div>
+
+      <!-- Row 2: four balanced columns -->
+      <div class="footer-groups">
+        <div class="footer-col footer-about">
+          <h4>About Sosuv</h4>
+          <p class="footer-tagline">Your capital markets technology partner, trusted by leading exchanges, brokers, trading platforms, buy-side firms and fintechs worldwide.</p>
+          <span class="footer-iso"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>ISO 27001 certified</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links two">
+            <!-- TODO: point Case Study and Insight at their pages once they exist -->
+            <li><a href="#approach">Expertise</a></li>
+            <li><a href="#platforms">Solutions</a></li>
+            <li><a href="#">Case Study</a></li>
+            <li><a href="#">Insight</a></li>
+            <li><a href="#approach">About Us</a></li>
+            <li><a href="mailto:careers@sosuvconsulting.com">Careers</a></li>
+            <li><a href="mailto:sales@sosuvconsulting.com">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reach us</h4>
+          <dl class="footer-contact">
+            <dt>Sales</dt><dd><a href="mailto:sales@sosuvconsulting.com">sales@sosuvconsulting.com</a></dd>
+            <!-- TODO: confirm careers email -->
+            <dt>Careers</dt><dd><a href="mailto:careers@sosuvconsulting.com">careers@sosuvconsulting.com</a></dd>
+            <dt>Offices</dt><dd>London · Bangalore<br>New York · Hong Kong</dd>
+          </dl>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay in the loop</h4>
+          <form class="footer-news" id="newsletterForm" novalidate>
+            <label for="nl-email" class="sr-only">Work email</label>
+            <div class="glass-input">
+              <input id="nl-email" type="email" placeholder="Your work email" required>
+              <button type="submit" aria-label="Subscribe"><svg width="16" height="16"><use href="#arrow"/></svg></button>
+            </div>
+            <p class="footer-note" id="nlNote" role="status"></p>
+          </form>
+          <!-- TODO: replace # with your real profile URLs -->
+          <ul class="footer-social" aria-label="Social media">
+            <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-7.5h2.5l.5-3h-3V8.75c0-.9.4-1.75 1.75-1.75H17V4.3A17 17 0 0 0 14.6 4C12.2 4 11 5.4 11 7.9v2.6H8.5v3H11V21"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 3: legal -->
+      <div class="footer-bottom">
+        <span>&copy; 2026 Sosuv Consulting LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#top" class="to-top">Top <span>↑</span></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosuv Consulting | Capital Markets Technology, SoFIX & ATDL360</title>
+  <meta name="description" content="Sosuv delivers institutional-grade capital markets technology: automated SoFIX certification, ATDL360 algorithmic trading suites, sub-microsecond FIX engines, and bespoke financial engineering.">
+  
+  <!-- Favicon / Institutional Symbol -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2308090d'/><path d='M25 68 L50 24 L75 68' stroke='%2338bdf8' stroke-width='9' fill='none'/><circle cx='50' cy='46' r='7' fill='%2310b981'/></svg>">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/terminal.css">
+</head>
+<body>
+
+  <!-- Global Market Clocks & Telemetry Ticker (Hudson River Trading Style) -->
+  <aside class="global-ticker-bar" aria-label="Global Financial Centers">
+    <div class="market-clocks-group">
+      <div class="market-clock" id="clock-ny">
+        <span class="status-dot"></span>
+        <span class="market-code">NYC</span>
+        <span class="time-display">--:--:--</span>
+        <span class="market-status-text">--</span>
+      </div>
+      <div class="market-clock" id="clock-lon">
+        <span class="status-dot"></span>
+        <span class="market-code">LON</span>
+        <span class="time-display">--:--:--</span>
+        <span class="market-status-text">--</span>
+      </div>
+      <div class="market-clock" id="clock-blr">
+        <span class="status-dot"></span>
+        <span class="market-code">BLR</span>
+        <span class="time-display">--:--:--</span>
+        <span class="market-status-text">--</span>
+      </div>
+      <div class="market-clock" id="clock-hkg">
+        <span class="status-dot"></span>
+        <span class="market-code">HKG</span>
+        <span class="time-display">--:--:--</span>
+        <span class="market-status-text">--</span>
+      </div>
+    </div>
+
+    <div class="telemetry-status">
+      <span>FIX ENGINE: <strong style="color:var(--text-primary)">ZERO-ALLOC</strong></span>
+      <span>DISPATCH: <strong style="color:var(--accent-emerald)">&lt; 1.12µs</strong></span>
+      <span class="telemetry-pill">FIX 4.2 / 4.4 / 5.0SP2 · ATDL 1.1 READY</span>
+    </div>
+  </aside>
+
+  <!-- Sticky Institutional Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo-wrap" aria-label="Sosuv Consulting Home">
+        <div class="brand-symbol">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <path d="M6 10L16 4L26 10V22L16 28L6 22V10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 16H21M16 11V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2.5" fill="#10b981"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SOSUV<span>.</span></span>
+          <span class="brand-sub">Capital Markets Tech</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#terminal-section" class="nav-link">Workstation <span class="nav-badge-pill">Interactive</span></a></li>
+          <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="#atdl360" class="nav-link">ATDL360</a></li>
+          <li class="nav-item"><a href="#topology" class="nav-link">Colocation</a></li>
+          <li class="nav-item"><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li class="nav-item"><a href="#pedigree" class="nav-link">Engineering</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Switcher -->
+        <button id="themeToggleBtn" class="btn-theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+          <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+
+        <a href="#consultation" class="btn btn-primary">Schedule Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Editorial Hero Section (Jane Street & Hudson River Trading Rigor) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-kicker">
+              <span class="hero-kicker-dot"></span>
+              Capital Markets Infrastructure · London · New York · Bengaluru · Hong Kong
+            </div>
+
+            <h1 class="hero-title">
+              Engineered for Zero-Tolerance <em>Trading Environments.</em>
+            </h1>
+
+            <p class="hero-description">
+              Sosuv delivers institutional-grade FIX messaging engines, automated <strong>SoFIX</strong> counterparty certification, and <strong>ATDL360</strong> algorithmic execution suites for global broker-dealers, clearinghouses, and quantitative asset managers.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#terminal-section" class="btn btn-primary">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                Launch Workstation Sandbox
+              </a>
+              <a href="#solutions" class="btn btn-outline">Explore Solutions</a>
+            </div>
+
+            <!-- Structured Metrics Strip -->
+            <div class="hero-metrics-bar">
+              <div class="metric-card">
+                <div class="metric-val">80<span>%</span></div>
+                <div class="metric-label">Faster Onboarding</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-val">&lt; 1.12<span>µs</span></div>
+                <div class="metric-label">Engine Latency</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-val">$4B<span>+</span></div>
+                <div class="metric-label">Client AUM Powered</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-val">99.999<span>%</span></div>
+                <div class="metric-label">High-Availability SLA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Photorealistic Trading Laboratory -->
+          <div class="hero-visual-frame">
+            <div class="hero-frame-header">
+              <span>TRADING LAB // SYSTEM CORE: SOFIX-ENTERPRISE-3.4</span>
+              <span>EQUINIX NY4 DIRECT</span>
+            </div>
+            
+            <div class="hero-image-wrap">
+              <img src="assets/hero-trading-lab.jpg" alt="Sosuv Quantitative Trading Lab & Engineering Floor" class="hero-image" width="640" height="360">
+              
+              <div class="hero-telemetry-overlay">
+                <div class="telemetry-stat-box">
+                  <span class="telemetry-stat-label">Active Conformance Rate</span>
+                  <span class="telemetry-stat-value">1.48M packets/sec</span>
+                </div>
+
+                <div class="exchange-badges-strip">
+                  <span class="exchange-chip">NYSE</span>
+                  <span class="exchange-chip">NASDAQ</span>
+                  <span class="exchange-chip">LSE</span>
+                  <span class="exchange-chip">CME</span>
+                  <span class="exchange-chip">HKEX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP INSTITUTIONAL WORKSTATION TERMINAL -->
+    <section class="interactive-terminal-section" id="terminal-section">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Capital Markets Engineering Sandbox</div>
+          <h2 class="section-title">The Sosuv Execution & Certification Terminal</h2>
+          <p class="section-subtitle">
+            Interact with our institutional tools in real time. Validate FIX conformance with AI spec parsing, configure live FIXatdl algorithmic strategies, evaluate venue routing, and decode raw packets.
+          </p>
+        </div>
+
+        <div class="terminal-shell">
+          <!-- Terminal Top Controls & Tabs -->
+          <div class="terminal-top-bar">
+            <div class="window-dots">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+
+            <div class="terminal-nav-tabs">
+              <button class="terminal-tab-btn active" data-target="panel-sofix">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                SoFIX Automated Certification
+              </button>
+              <button class="terminal-tab-btn" data-target="panel-atdl">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                ATDL360 Strategy Visualizer
+              </button>
+              <button class="terminal-tab-btn" data-target="panel-sor">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Smart Order Router (SOR)
+              </button>
+              <button class="terminal-tab-btn" data-target="panel-decoder">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Raw FIX Packet Decoder
+              </button>
+            </div>
+
+            <div class="terminal-telemetry-badge">
+              <span class="status-dot"></span>
+              CONFORMANCE ENGINE ACTIVE
+            </div>
+          </div>
+
+          <!-- Terminal Body -->
+          <div class="terminal-body">
+            
+            <!-- PANEL 1: SoFIX Automated Certification -->
+            <div class="terminal-view-panel active" id="panel-sofix">
+              <div class="terminal-grid-layout">
+                <div class="terminal-controls-pane">
+                  <div class="pane-label">
+                    <span>COUNTERPARTY SPEC</span>
+                    <span style="color:var(--accent-sky)">AI-AUTOMATED</span>
+                  </div>
+
+                  <div class="control-field">
+                    <label for="sofixSpecSelect">Target Broker / Venue FIX Specification</label>
+                    <select id="sofixSpecSelect" class="terminal-select">
+                      <option value="Goldman Sachs DMA FIX 4.4">Goldman Sachs Electronic Trading (GSET) 4.4</option>
+                      <option value="Morgan Stanley SOR FIX 4.2">Morgan Stanley Direct Execution 4.2</option>
+                      <option value="Enfusion Equities Execution DMA">Enfusion Multi-Asset Gateway 4.4</option>
+                      <option value="Bloomberg EMSX FIX 4.4 Gateway">Bloomberg EMSX Gateway 4.4</option>
+                    </select>
+                  </div>
+
+                  <div class="control-field">
+                    <label>Certification Asset Class</label>
+                    <div class="radio-pill-group">
+                      <div class="radio-pill-label active">Equities</div>
+                      <div class="radio-pill-label">FX / Swaps</div>
+                      <div class="radio-pill-label">Listed Options</div>
+                    </div>
+                  </div>
+
+                  <button id="runCertBtn" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                    </svg>
+                    Run Automated Certification
+                  </button>
+
+                  <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--border-subtle);">
+                    <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.75rem; margin-bottom:0.4rem;">
+                      <span style="color:var(--text-muted)">Suite Pass Progress:</span>
+                      <span id="certProgressText" style="color:var(--accent-emerald)">Ready to start</span>
+                    </div>
+                    <div style="background:var(--bg-tertiary); height:5px; border-radius:3px; overflow:hidden;">
+                      <div id="certProgressBar" style="width:0%; height:100%; background:var(--accent-emerald); transition: width 0.3s ease;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Display Logs & Test Suite Matrix -->
+                <div class="terminal-display-pane">
+                  <div class="display-header-strip">
+                    <span class="stream-title">
+                      <span class="stream-live-indicator"></span>
+                      Real-Time Conformance Packet Stream
+                    </span>
+                    <span style="color:var(--text-muted)">Click any tag to inspect specification</span>
+                  </div>
+
+                  <!-- Live FIX Message Log Stream -->
+                  <div class="fix-console-window" id="sofixConsole">
+                    <div class="fix-log-entry">
+                      <span class="log-ts">00:00:00.000</span>
+                      <span class="log-type inbound">[READY]</span>
+                      <span class="log-content">SoFIX Engine standing by. Select broker spec and click "Run Automated Certification".</span>
+                    </div>
+                  </div>
+
+                  <!-- Active FIX Tag Inspector Drawer -->
+                  <div class="fix-inspector-card" id="activeTagInspector">
+                    <div class="inspector-meta">
+                      <span>Tag: <strong>35</strong></span>
+                      <span>Field: <strong>MsgType</strong></span>
+                      <span>Value: <strong>D (NewOrderSingle)</strong></span>
+                    </div>
+                    <div style="color:var(--text-muted); font-size:0.72rem;">Standard execution request message defining intended price, quantity, and side.</div>
+                  </div>
+
+                  <!-- 8 Conformance Matrix Cards -->
+                  <div class="cert-matrix-grid">
+                    <div class="cert-test-card" id="tc-logon">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">1. Logon & Heartbeat</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">Tag 35=A / 35=0</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-nos">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">2. NewOrderSingle (35=D)</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">Tag 11 ClOrdID Check</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-qty">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">3. Tag 38/44 Bounds</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">Qty & Price Limits</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-tif">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">4. TimeInForce (Tag 59)</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">Day, IOC, FOK, GTD</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-cancel">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">5. Cancel/Replace (35=G)</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">OrigClOrdID Handshake</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-exec">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">6. ExecReports (35=8)</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">CumQty & AvgPx Math</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-atdl">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">7. FIXatdl Parameters</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">Custom Algo Tags</span>
+                    </div>
+
+                    <div class="cert-test-card" id="tc-drop">
+                      <div class="cert-test-header">
+                        <span class="cert-test-name">8. Drop-Copy Session</span>
+                        <span class="cert-badge">IDLE</span>
+                      </div>
+                      <span class="cert-latency">ExecType=I Reconciled</span>
+                    </div>
+                  </div>
+
+                  <div class="terminal-footer-metrics">
+                    <span>Average Validation Latency: <span class="metric-highlight">0.84µs</span></span>
+                    <span>Onboarding Cycle Acceleration: <span class="metric-highlight" id="certSpeedupVal">80% Time Reduction</span></span>
+                    <span>Spec Conformance: <span style="color:var(--accent-emerald)">100% Guaranteed</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 2: ATDL360 Algo Strategy Visualizer -->
+            <div class="terminal-view-panel" id="panel-atdl">
+              <div class="terminal-grid-layout">
+                <div class="terminal-controls-pane">
+                  <div class="pane-label">
+                    <span>ALGO PARAMETERS</span>
+                    <span style="color:var(--accent-sky)">FIXatdl 1.1</span>
+                  </div>
+
+                  <div class="control-field">
+                    <label for="atdlAlgoSelect">Algorithmic Strategy</label>
+                    <select id="atdlAlgoSelect" class="terminal-select">
+                      <option value="VWAP">VWAP (Volume Weighted Avg Price)</option>
+                      <option value="TWAP">TWAP (Time Weighted Avg Price)</option>
+                      <option value="POV">POV (Percentage of Volume)</option>
+                      <option value="DARK_AGG">Dark Liquidity Seeker</option>
+                    </select>
+                  </div>
+
+                  <div class="control-field">
+                    <div class="range-slider-header">
+                      <label>Target Participation Rate</label>
+                      <span id="atdlPovVal" class="range-val-badge">15%</span>
+                    </div>
+                    <input type="range" id="atdlPovSlider" class="terminal-range" min="1" max="50" value="15">
+                  </div>
+
+                  <div class="control-field">
+                    <div class="range-slider-header">
+                      <label>Max Spread Tolerance</label>
+                      <span id="atdlSpreadVal" class="range-val-badge">5 bps</span>
+                    </div>
+                    <input type="range" id="atdlSpreadSlider" class="terminal-range" min="1" max="30" value="5">
+                  </div>
+
+                  <div class="control-field">
+                    <label>Schedule Urgency</label>
+                    <div class="radio-pill-group">
+                      <div class="radio-pill-label urgency-radio" data-val="Low">Low</div>
+                      <div class="radio-pill-label urgency-radio active" data-val="Medium">Med</div>
+                      <div class="radio-pill-label urgency-radio" data-val="High">High</div>
+                    </div>
+                  </div>
+
+                  <div class="control-field" style="flex-direction:row; align-items:center; gap:0.5rem; margin-top:0.25rem;">
+                    <input type="checkbox" id="atdlDarkCheck" checked style="accent-color:var(--accent-sky); cursor:pointer;">
+                    <label for="atdlDarkCheck" style="margin:0; cursor:pointer;">Cross in Midpoint Dark Pools</label>
+                  </div>
+                </div>
+
+                <!-- ATDL Output Display -->
+                <div class="terminal-display-pane">
+                  <div class="display-header-strip">
+                    <span class="stream-title">
+                      <span class="stream-live-indicator"></span>
+                      Synchronized Outbound FIX Tag Serialization
+                    </span>
+                    <span style="color:var(--text-muted)">Click any tag to inspect spec</span>
+                  </div>
+
+                  <div style="background:var(--bg-primary); border:1px solid var(--border-subtle); border-radius:var(--radius-xs); padding:0.85rem; font-family:var(--font-mono); font-size:0.82rem; line-height:1.7;" id="atdlLiveTagStream">
+                    <!-- Populated dynamically -->
+                  </div>
+
+                  <div class="display-header-strip" style="margin-top:0.5rem; padding-bottom:0.35rem;">
+                    <span class="stream-title">Generated FIXatdl Schema Definition</span>
+                    <span style="color:var(--accent-sky); font-family:var(--font-mono); font-size:0.7rem;">XML COMPLIANT</span>
+                  </div>
+
+                  <pre style="background:var(--bg-primary); border:1px solid var(--border-subtle); border-radius:var(--radius-xs); padding:0.85rem; font-family:var(--font-mono); font-size:0.75rem; color:#93c5fd; overflow-x:auto; height:140px;" id="atdlXmlPreview"></pre>
+
+                  <div class="terminal-footer-metrics">
+                    <span>Validation Engine: <span class="metric-highlight">ATDL360 Live</span></span>
+                    <span>Broker GUI Adaptability: <span style="color:var(--accent-emerald)">Fidessa · Enfusion · Bloomberg · Charles River · Iress</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: Smart Order Router (SOR) Simulator -->
+            <div class="terminal-view-panel" id="panel-sor">
+              <div class="terminal-grid-layout">
+                <div class="terminal-controls-pane">
+                  <div class="pane-label">
+                    <span>SOR ENGINE PARAMETERS</span>
+                    <span style="color:var(--accent-sky)">MULTI-VENUE</span>
+                  </div>
+
+                  <div class="control-field">
+                    <label>Order Size & Symbol</label>
+                    <input type="text" class="terminal-input" value="10,000 NVDA (Equities)" readonly>
+                  </div>
+
+                  <div class="control-field">
+                    <label>Primary Routing Goal</label>
+                    <div class="radio-pill-group">
+                      <div class="radio-pill-label active">Best Ex</div>
+                      <div class="radio-pill-label">Lowest Fee</div>
+                      <div class="radio-pill-label">Speed Bump</div>
+                    </div>
+                  </div>
+
+                  <button id="runSorBtn" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    Simulate Smart Venue Routing
+                  </button>
+
+                  <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--border-subtle); font-family:var(--font-mono); font-size:0.75rem; display:flex; flex-direction:column; gap:0.4rem;">
+                    <div style="display:flex; justify-content:space-between;">
+                      <span style="color:var(--text-muted)">Dark Pool Share:</span>
+                      <span id="sorDarkFill" style="color:var(--accent-sky)">65% Simulated</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+                      <span style="color:var(--text-muted)">Price Improvement:</span>
+                      <span id="sorPriceImp" style="color:var(--accent-emerald)">+$227.50 (+1.5 bps)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SOR Execution Logs -->
+                <div class="terminal-display-pane">
+                  <div class="display-header-strip">
+                    <span class="stream-title">
+                      <span class="stream-live-indicator"></span>
+                      Aggregated Multi-Venue Fill Hops
+                    </span>
+                    <span style="color:var(--text-muted)">Equinix NY4 Cross-Connect</span>
+                  </div>
+
+                  <div class="fix-console-window" id="sorRouteLog">
+                    <div class="fix-log-entry">
+                      <span class="log-ts">SOR_CORE</span>
+                      <span class="log-content">Standing by. Click "Simulate Smart Venue Routing" to evaluate lit books and dark pools.</span>
+                    </div>
+                  </div>
+
+                  <div class="terminal-footer-metrics">
+                    <span>Routing Logic: <span class="metric-highlight">NBBO Sweep + Dark Midpoint Cross</span></span>
+                    <span>Information Leakage: <span style="color:var(--accent-emerald)">0.00% (Sub-millisecond Fill)</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 4: Raw FIX Packet Decoder & Validator (New Developer Tool) -->
+            <div class="terminal-view-panel" id="panel-decoder">
+              <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+                  <div style="display:flex; gap:0.5rem; align-items:center;">
+                    <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">Presets:</span>
+                    <button class="btn btn-outline fix-preset-btn" style="padding:0.25rem 0.6rem; font-size:0.72rem;" data-sample="8=FIX.4.4|9=142|35=D|49=CLIENT_DMA|56=SOSUV_GW|34=1024|52=20261026-12:00:00.145|11=ORD-9021|55=AAPL|54=1|38=5000|40=2|44=185.50|59=0|10=182|">NewOrderSingle (35=D)</button>
+                    <button class="btn btn-outline fix-preset-btn" style="padding:0.25rem 0.6rem; font-size:0.72rem;" data-sample="8=FIX.4.4|9=168|35=8|49=SOSUV_GW|56=CLIENT_DMA|34=1025|52=20261026-12:00:00.285|37=MATCH-8891|11=ORD-9021|17=FILL-01|150=2|39=2|55=AAPL|38=5000|32=5000|31=185.50|14=5000|6=185.50|10=092|">ExecutionReport (35=8)</button>
+                    <button class="btn btn-outline fix-preset-btn" style="padding:0.25rem 0.6rem; font-size:0.72rem;" data-sample="8=FIX.4.4|9=156|35=G|49=CLIENT_DMA|56=SOSUV_GW|34=1026|52=20261026-12:00:00.320|41=ORD-9021|11=ORD-9022|55=AAPL|54=1|38=3500|44=186.00|10=244|">Cancel/Replace (35=G)</button>
+                  </div>
+                  <button id="decodeFixBtn" class="btn btn-primary" style="padding:0.35rem 0.85rem; font-size:0.75rem;">Decode & Audit Packet</button>
+                </div>
+
+                <textarea id="rawFixInput" class="terminal-input" rows="2" style="width:100%; font-family:var(--font-mono); font-size:0.78rem; resize:vertical;">8=FIX.4.4|9=142|35=D|49=CLIENT_DMA|56=SOSUV_GW|34=1024|52=20261026-12:00:00.145|11=ORD-9021|55=AAPL|54=1|38=5000|40=2|44=185.50|59=0|10=182|</textarea>
+
+                <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:var(--radius-xs); overflow-x:auto;">
+                  <table class="decoder-table">
+                    <thead>
+                      <tr>
+                        <th>Tag #</th>
+                        <th>Field Name</th>
+                        <th>Wire Value</th>
+                        <th>Protocol Definition & Meaning</th>
+                        <th>Audit Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="fixDecoderBody">
+                      <!-- Populated dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS BENTO GRID (Hudson River Trading Structure) -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-tag">Institutional Solutions</div>
+            <h2 class="section-title">Engineered for Ultra-Scale Trading</h2>
+          </div>
+          <p class="section-subtitle" style="max-width:540px;">
+            From automated AI certification platforms to deterministic low-latency messaging engines, Sosuv empowers institutional broker-dealers, clearinghouses, and algorithmic asset managers.
+          </p>
+        </div>
+
+        <div class="solutions-bento-grid">
+          
+          <!-- Bento 1: SoFIX Platform (Featured) -->
+          <div class="bento-card bento-featured">
+            <div class="bento-header-row">
+              <div class="bento-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <span class="bento-badge">Flagship AI Platform</span>
+            </div>
+            
+            <h3 class="bento-title">SoFIX: Automated FIX Certification</h3>
+            <p class="bento-desc">
+              SoFIX is the capital markets industry’s leading automated, AI-driven FIX certification platform. It eliminates manual spec handling, automated test pack creation, and conformance verification—reducing counterparty onboarding cycles from 6 weeks to just days.
+            </p>
+            
+            <ul class="bento-feature-list">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Up to 80% reduction in client and broker onboarding time
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Automated parsing of custom broker specs, dictionaries & repeating groups
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Self-service client testing portal with instant conformance audit certificates
+              </li>
+            </ul>
+
+            <a href="#consultation" class="bento-link">
+              Request SoFIX Enterprise Demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Bento 2: ATDL360 -->
+          <div class="bento-card" id="atdl360">
+            <div class="bento-header-row">
+              <div class="bento-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+              </div>
+              <span class="bento-badge">Algorithmic Suite</span>
+            </div>
+            
+            <h3 class="bento-title">ATDL360 Services</h3>
+            <p class="bento-desc">
+              Complete lifecycle FIXatdl schema design, broker strategy statement authoring, parameter rule trees, and dynamic UI rendering across major OMS/EMS platforms (Bloomberg EMSX, Fidessa, Enfusion, Charles River).
+            </p>
+            
+            <ul class="bento-feature-list">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                FIXatdl 1.1 / 1.2 compliant strategy XML schemas
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Dynamic parameter validation & UI widget mappings
+              </li>
+            </ul>
+
+            <a href="#consultation" class="bento-link">Explore ATDL360 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <!-- Bento 3: Institutional FIX Engine -->
+          <div class="bento-card">
+            <div class="bento-header-row">
+              <div class="bento-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <span class="bento-badge">Low Latency</span>
+            </div>
+
+            <h3 class="bento-title">Enterprise FIX Engine</h3>
+            <p class="bento-desc">
+              Deterministic C++20 and low-GC Java messaging engine built for high-throughput institutional order routing. Zero-allocation memory pools, lock-free queues, and multi-asset routing.
+            </p>
+
+            <ul class="bento-feature-list">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Sub-microsecond message dispatch (&lt; 1.12µs)
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Supports FIX 4.0 through FIX 5.0SP2 / FAST
+              </li>
+            </ul>
+
+            <a href="#consultation" class="bento-link">View Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <!-- Bento 4: Smart Order Router (SOR) -->
+          <div class="bento-card">
+            <div class="bento-header-row">
+              <div class="bento-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+              </div>
+              <span class="bento-badge">Execution Quality</span>
+            </div>
+
+            <h3 class="bento-title">Rule-Based Smart Router</h3>
+            <p class="bento-desc">
+              Multi-venue execution engine designed to minimize market impact, aggregate fragmented liquidity, cross in midpoint dark pools, and optimize fee schedules across lit and alternative venues.
+            </p>
+
+            <a href="#consultation" class="bento-link">Router Specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <!-- Bento 5: FIX Monitor & Drop-Copy -->
+          <div class="bento-card">
+            <div class="bento-header-row">
+              <div class="bento-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <span class="bento-badge">Observability</span>
+            </div>
+
+            <h3 class="bento-title">System-Agnostic Monitor</h3>
+            <p class="bento-desc">
+              Real-time deep packet telemetry, drop-copy post-trade reconciliation, sequence reset alerts, and automated anomaly detection to prevent exchange outages.
+            </p>
+
+            <a href="#consultation" class="bento-link">Monitoring Features <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL NETWORK TOPOLOGY & LATENCY MATRIX -->
+    <section class="section" id="topology" style="background:var(--bg-secondary); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="topology-grid">
+          <div>
+            <div class="section-tag">Global Capital Topology</div>
+            <h2 class="section-title">Co-Located in World Financial Centers</h2>
+            <p class="section-subtitle" style="margin-bottom:1.5rem;">
+              Trading operations require proximity to matching engines. Sosuv maintains infrastructure and engineering teams across London, New York, Bengaluru, and Hong Kong to ensure direct venue interconnects.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:0.85rem; font-size:0.9rem;">
+              <div style="display:flex; align-items:center; gap:0.65rem;">
+                <span class="status-dot"></span>
+                <span><strong>Equinix NY4 (Secaucus)</strong> · Cross-connect to NYSE, NASDAQ, BATS</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.65rem;">
+                <span class="status-dot"></span>
+                <span><strong>Equinix LD4 (Slough)</strong> · Direct link to LSE, Euronext, Cboe Europe</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.65rem;">
+                <span class="status-dot"></span>
+                <span><strong>Equinix SG1 / HK1</strong> · Access to SGX, HKEX, and Tokyo CC2</span>
+              </div>
+            </div>
+
+            <!-- Photorealistic Colocation Datacenter Box -->
+            <div class="datacenter-preview-box">
+              <img src="assets/datacenter-colocation.jpg" alt="Equinix Financial Colocation Datacenter Cage" width="560" height="220">
+              <div class="datacenter-caption">
+                <span>FACILITY: EQUINIX NY4 SECAUCUS</span>
+                <span style="color:var(--accent-emerald);">LOW-LATENCY FIBER CROSS-CONNECT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="network-hub-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Direct Interconnect Latency Matrix</span>
+              <span class="ping-pill">LIVE TELEMETRY</span>
+            </div>
+
+            <table class="latency-table">
+              <thead>
+                <tr>
+                  <th>Origin Hub</th>
+                  <th>Destination Venue</th>
+                  <th>Protocol</th>
+                  <th>Round-Trip</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>London (LD4)</td>
+                  <td>London Stock Exchange (LSE)</td>
+                  <td>FIX 5.0SP2</td>
+                  <td><span class="ping-pill">0.42 ms</span></td>
+                </tr>
+                <tr>
+                  <td>New York (NY4)</td>
+                  <td>NASDAQ ITCH / OUCH</td>
+                  <td>Native Binary</td>
+                  <td><span class="ping-pill">0.38 ms</span></td>
+                </tr>
+                <tr>
+                  <td>New York (NY4)</td>
+                  <td>Cboe EDGA/EDGX</td>
+                  <td>FIX 4.2</td>
+                  <td><span class="ping-pill">0.45 ms</span></td>
+                </tr>
+                <tr>
+                  <td>London (LD4)</td>
+                  <td>Euronext Paris / Amsterdam</td>
+                  <td>Optiq / FIX</td>
+                  <td><span class="ping-pill">1.84 ms</span></td>
+                </tr>
+                <tr>
+                  <td>Hong Kong (HK1)</td>
+                  <td>HKEX Orion Trading (OCG)</td>
+                  <td>Binary / FIX</td>
+                  <td><span class="ping-pill">0.51 ms</span></td>
+                </tr>
+                <tr>
+                  <td>Bengaluru (BLR)</td>
+                  <td>NSE / BSE Direct Gateway</td>
+                  <td>FIX 4.4 Drop</td>
+                  <td><span class="ping-pill">1.12 ms</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES (Jane Street Editorial Presentation) -->
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Proven Results</div>
+          <h2 class="section-title">Institutional Case Studies</h2>
+          <p class="section-subtitle">
+            How leading financial institutions partner with Sosuv to scale order flow, accelerate client go-live, and eliminate production trade breaks.
+          </p>
+        </div>
+
+        <div class="case-studies-container">
+          
+          <!-- Case 1: Tier-1 US Bank FIX Network -->
+          <div class="case-card">
+            <div>
+              <div class="case-meta">Tier-1 US Investment Bank · Global FIX Transformation</div>
+              <h3 class="case-title">Scaling 100+ Institutional Broker-Dealer Connectivity Gateways</h3>
+              <p class="case-desc">
+                The client faced severe onboarding bottlenecks: certifying new institutional trading counterparties took over 6 weeks per connection due to manual spec audits and validation back-and-forth. Sosuv deployed SoFIX and automated conformance test packs across Equities and Listed Options desks.
+              </p>
+              <a href="#consultation" class="btn btn-outline" style="font-size:0.82rem;">Read Full Architecture Paper</a>
+            </div>
+
+            <div class="case-stats-panel">
+              <div class="case-stat-item">
+                <span class="case-stat-number">80%</span>
+                <span class="case-stat-desc">Reduction in Go-Live Time</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">100+</span>
+                <span class="case-stat-desc">Brokers Automated</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">Zero</span>
+                <span class="case-stat-desc">Production Outages</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">4 Days</span>
+                <span class="case-stat-desc">Avg Onboarding Cycle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: $4B+ AUM Buy-Side Fund -->
+          <div class="case-card">
+            <div>
+              <div class="case-meta">Global Asset Manager · $4B+ AUM</div>
+              <h3 class="case-title">Multi-Asset Algorithmic Trading Execution Gateway & ATDL360</h3>
+              <p class="case-desc">
+                Engineering a custom algorithmic execution gateway unifying FX, Equities, and Fixed Income order flows. Embedded ATDL360 dynamically converts proprietary execution strategies into standard broker interfaces with real-time risk checks.
+              </p>
+              <a href="#consultation" class="btn btn-outline" style="font-size:0.82rem;">Explore Implementation</a>
+            </div>
+
+            <div class="case-stats-panel">
+              <div class="case-stat-item">
+                <span class="case-stat-number">&lt; 1.2µs</span>
+                <span class="case-stat-desc">Order Gate Latency</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">14</span>
+                <span class="case-stat-desc">Exchanges Integrated</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">$4B+</span>
+                <span class="case-stat-desc">AUM Transacted</span>
+              </div>
+              <div class="case-stat-item">
+                <span class="case-stat-number">100%</span>
+                <span class="case-stat-desc">Audit Trail Compliance</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Client Testimonial Spotlight -->
+        <div class="testimonial-quote-box">
+          <p class="quote-content">
+            "Team members bring exceptional education and work experience, from top-ranked technical universities like IITs and NITs, and companies such as Microsoft, Oracle, Nomura, and Goldman Sachs. Sosuv ensures you can worry less about outages and missed deadlines, and focus more on your business growth targets."
+          </p>
+          <div class="quote-author">
+            <div class="brand-symbol" style="width:34px; height:34px;">
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-sky); font-weight:700;">AD</span>
+            </div>
+            <div class="author-info">
+              <h4>Ryan Jaipaul</h4>
+              <p>Head of Engineering · Automated Data Inc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING PEDIGREE & RIGOR (Hudson River Trading Style) -->
+    <section class="section" id="pedigree" style="background:var(--bg-secondary); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Engineering Rigor</div>
+          <h2 class="section-title">Built by Wall Street & Tech Veterans</h2>
+          <p class="section-subtitle">
+            Our engineering collective combines academic research with decades of production trading floor experience.
+          </p>
+        </div>
+
+        <div class="pedigree-grid">
+          <div class="pedigree-card">
+            <h3>Elite Academic Roots</h3>
+            <p>Engineers and researchers recruited from premier technical universities including Indian Institutes of Technology (IITs) and NITs.</p>
+          </div>
+          <div class="pedigree-card">
+            <h3>Tier-1 Institution Lineage</h3>
+            <p>Alumni from leading quantitative and investment banking institutions including Goldman Sachs, Nomura, Microsoft, and Oracle.</p>
+          </div>
+          <div class="pedigree-card">
+            <h3>FIX Protocol Member</h3>
+            <p>Active participants adhering to FIX Protocol Ltd (FPL) standards, FIXatdl 1.1/1.2, and ultra-fast binary protocols.</p>
+          </div>
+          <div class="pedigree-card">
+            <h3>Deterministic Systems</h3>
+            <p>Mastery of modern C++20, low-GC Java, lock-free concurrency, and kernel bypass networking (Solarflare OpenOnload / EF_VI).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION & SPEC REVIEW CTA (Stripe / Ramp Quality) -->
+    <section class="cta-banner-section" id="consultation">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="section-tag">Engage Sosuv</div>
+            <h2 class="section-title" style="margin-bottom:1rem;">Ready to Accelerate Your Trading Architecture?</h2>
+            <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:2rem;">
+              Whether you need to automate broker FIX onboarding with <strong>SoFIX</strong>, implement <strong>ATDL360</strong> algorithmic strategy rendering, or audit low-latency connectivity, our senior architects are available for a technical review.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:0.75rem; font-family:var(--font-mono); font-size:0.82rem; color:var(--text-secondary);">
+              <div><strong style="color:var(--text-primary)">Direct Inquiries:</strong> <a href="mailto:sales@sosuvconsulting.com" style="color:var(--accent-sky)">sales@sosuvconsulting.com</a></div>
+              <div><strong style="color:var(--text-primary)">Global Locations:</strong> London · New York · Bengaluru · Hong Kong</div>
+            </div>
+          </div>
+
+          <form id="consultationForm" class="consultation-form">
+            <div class="form-group">
+              <label for="clientName">Full Name & Title</label>
+              <input type="text" id="clientName" class="form-input" placeholder="e.g. David Vance, Head of Electronic Trading" required>
+            </div>
+
+            <div class="form-group">
+              <label for="clientEmail">Institutional Email</label>
+              <input type="email" id="clientEmail" class="form-input" placeholder="name@firm.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="clientOrgType">Organization Type</label>
+              <select id="clientOrgType" class="form-select">
+                <option value="Broker-Dealer / Sell-Side">Broker-Dealer / Sell-Side</option>
+                <option value="Buy-Side / Asset Manager">Buy-Side / Asset Manager / Hedge Fund</option>
+                <option value="Trading Technology Vendor">Trading Technology Vendor / EMS / OMS</option>
+                <option value="Exchange / Liquidity Venue">Exchange / Alternative Trading System (ATS)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="clientInterest">Primary Area of Interest</label>
+              <select id="clientInterest" class="form-select">
+                <option value="SoFIX Automated Certification">SoFIX Automated Certification Platform</option>
+                <option value="ATDL360 Algorithmic Strategy Suite">ATDL360 Algorithmic Strategy Suite</option>
+                <option value="Enterprise FIX Engine & Connectivity">Enterprise FIX Engine & Connectivity</option>
+                <option value="Smart Order Router (SOR)">Smart Order Router (SOR) & Venue Aggregation</option>
+                <option value="Custom Capital Markets Engineering">Custom Capital Markets Full-Stack Engineering</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:0.5rem; width:100%;">
+              Schedule Architectural Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Global Hubs Bar -->
+      <div class="global-hubs-strip">
+        <div class="hub-item">
+          <span class="hub-city"><span class="status-dot"></span> London</span>
+          <span class="hub-address">30 St Mary Axe, City of London</span>
+        </div>
+        <div class="hub-item">
+          <span class="hub-city"><span class="status-dot"></span> New York</span>
+          <span class="hub-address">One World Trade Center, New York</span>
+        </div>
+        <div class="hub-item">
+          <span class="hub-city"><span class="status-dot"></span> Bengaluru</span>
+          <span class="hub-address">Outer Ring Road Technology Corridor</span>
+        </div>
+        <div class="hub-item">
+          <span class="hub-city"><span class="status-dot"></span> Hong Kong</span>
+          <span class="hub-address">Two International Finance Centre, Central</span>
+        </div>
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo-wrap">
+            <div class="brand-symbol">
+              <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+                <path d="M6 10L16 4L26 10V22L16 28L6 22V10Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="16" r="2.5" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">SOSUV<span>.</span></span>
+              <span class="brand-sub">Capital Markets Tech</span>
+            </div>
+          </div>
+          <p>
+            Intelligent technology for capital markets. Delivering high-throughput FIX infrastructure, automated SoFIX certification, and algorithmic execution.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul class="footer-nav">
+            <li><a href="#solutions">SoFIX Platform</a></li>
+            <li><a href="#atdl360">ATDL360 Services</a></li>
+            <li><a href="#solutions">Enterprise FIX Engine</a></li>
+            <li><a href="#solutions">Smart Order Router</a></li>
+            <li><a href="#solutions">FIX Monitor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Case Studies</h4>
+          <ul class="footer-nav">
+            <li><a href="#case-studies">Global FIX Network</a></li>
+            <li><a href="#case-studies">Crypto Credit Platform</a></li>
+            <li><a href="#case-studies">$4B+ Global Buyside</a></li>
+            <li><a href="#case-studies">Latency Audits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Firm</h4>
+          <ul class="footer-nav">
+            <li><a href="#pedigree">Engineering Team</a></li>
+            <li><a href="#topology">Global Network</a></li>
+            <li><a href="#consultation">Careers</a></li>
+            <li><a href="mailto:sales@sosuvconsulting.com">sales@sosuvconsulting.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sosuv Consulting LLC. All rights reserved. Intelligent Technology for Capital Markets.</div>
+        <div>London · Bengaluru · New York · Hong Kong</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/interactive-terminal.js"></script>
+</body>
+</html>
